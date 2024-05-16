@@ -1,0 +1,3 @@
+[console_scripts]
+rl_driving_node = rl_node.rl_driving_node:main
+

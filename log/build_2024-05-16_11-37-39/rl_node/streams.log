@@ -1,0 +1,25 @@
+[0.718s] Invoking command in '/home/ros/robot_ws/build/rl_node': PYTHONPATH=/home/ros/robot_ws/build/rl_node/prefix_override:/home/ros/robot_ws/install/rl_node/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ros/robot_ws/build/rl_node/build --no-deps symlink_data
+[0.931s] running develop
+[1.050s] running egg_info
+[1.050s] creating rl_node.egg-info
+[1.050s] writing rl_node.egg-info/PKG-INFO
+[1.050s] writing dependency_links to rl_node.egg-info/dependency_links.txt
+[1.050s] writing entry points to rl_node.egg-info/entry_points.txt
+[1.050s] writing requirements to rl_node.egg-info/requires.txt
+[1.050s] writing top-level names to rl_node.egg-info/top_level.txt
+[1.053s] writing manifest file 'rl_node.egg-info/SOURCES.txt'
+[1.083s] reading manifest file 'rl_node.egg-info/SOURCES.txt'
+[1.084s] writing manifest file 'rl_node.egg-info/SOURCES.txt'
+[1.114s] running build_ext
+[1.115s] Creating /home/ros/robot_ws/install/rl_node/lib/python3.8/site-packages/site.py
+[1.117s] Creating /home/ros/robot_ws/install/rl_node/lib/python3.8/site-packages/rl-node.egg-link (link to .)
+[1.117s] Installing rl_driving_node script to /home/ros/robot_ws/install/rl_node/lib/rl_node
+[1.118s] 
+[1.118s] Installed /home/ros/robot_ws/build/rl_node
+[1.118s] running symlink_data
+[1.118s] creating /home/ros/robot_ws/install/rl_node/share/ament_index
+[1.118s] creating /home/ros/robot_ws/install/rl_node/share/ament_index/resource_index
+[1.118s] creating /home/ros/robot_ws/install/rl_node/share/ament_index/resource_index/packages
+[1.118s] symbolically linking /home/ros/robot_ws/build/rl_node/resource/rl_node -> /home/ros/robot_ws/install/rl_node/share/ament_index/resource_index/packages
+[1.118s] symbolically linking /home/ros/robot_ws/build/rl_node/package.xml -> /home/ros/robot_ws/install/rl_node/share/rl_node
+[1.155s] Invoked command in '/home/ros/robot_ws/build/rl_node' returned '0': PYTHONPATH=/home/ros/robot_ws/build/rl_node/prefix_override:/home/ros/robot_ws/install/rl_node/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ros/robot_ws/build/rl_node/build --no-deps symlink_data

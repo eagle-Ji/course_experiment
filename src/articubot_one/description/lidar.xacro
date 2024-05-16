@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+
+    <link
+        name="laser_link">
+        <inertial>
+        <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+        <mass
+            value="0" />
+        <inertia
+            ixx="0"
+            ixy="0"
+            ixz="0"
+            iyy="0"
+            iyz="0"
+            izz="0" />
+        </inertial>
+        <visual>
+        <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+        <geometry>
+            <!-- <mesh filename="/home/suleman/dev_ws/src/articubot_one/description/meshes/Ackermann/laser_link.STL" /> -->
+            <mesh filename="file://$(find articubot_one)/description/meshes/Ackermann/laser_link.STL"/>
+        </geometry>
+        <material
+            name="">
+            <color
+            rgba="1 1 1 1" />
+        </material>
+        </visual>
+        <collision>
+        <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+        <geometry>
+            <!-- <mesh filename="/home/suleman/dev_ws/src/articubot_one/description/meshes/Ackermann/laser_link.STL" /> -->
+            <mesh filename="file://$(find articubot_one)/description/meshes/Ackermann/laser_link.STL"/>
+        </geometry>
+        </collision>
+    </link>
+    <joint
+        name="laser_joint"
+        type="fixed">
+        <origin
+        xyz="0.012548 0 0.1311"
+        rpy="0 0 3.1416" />
+        <parent
+        link="base_link" />
+        <child
+        link="laser_link" />
+        <axis
+        xyz="0 0 0" />
+    </joint>
+
+    <gazebo reference="laser_link">
+        <material>Gazebo/Black</material>
+
+        <sensor name="laser" type="ray">
+            <pose> 0 0 0 0 0 0 </pose>
+            <visualize>true</visualize>
+            <update_rate>10</update_rate>
+            <ray>
+                <scan>
+                    <horizontal>
+                        <samples>360</samples>
+                        <min_angle>-3.14</min_angle>
+                        <max_angle>3.14</max_angle>
+                    </horizontal>
+                </scan>
+                <range>
+                    <min>0.3</min>
+                    <max>20</max>
+                </range>
+            </ray>
+            <plugin name="laser_controller" filename="libgazebo_ros_ray_sensor.so">
+                <ros>
+                    <argument>~/out:=scan</argument>
+                </ros>
+                <output_type>sensor_msgs/LaserScan</output_type>
+                <frame_name>laser_link</frame_name>
+            </plugin>
+        </sensor>
+    </gazebo>
+</robot>
+
+
