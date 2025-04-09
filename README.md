@@ -59,3 +59,17 @@ This method processes Odometry messages. It prints the robot's `x` and `y` coord
 
    ```bash
    sudo apt-get install ros-foxy-geometry-msgs ros-foxy-sensor-msgs ros-foxy-nav-msgs
+
+   # ROS Reinforcement Learning Node
+
+## Installation Instructions
+
+### 1. Clone the Repository
+
+Clone this repository into your ROS 2 workspace's `src` directory:
+
+```bash
+cd ~/ros2_ws/src
+git clone https://github.com/your-username/ros-rl-node.git
+
+
