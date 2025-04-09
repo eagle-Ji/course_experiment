@@ -70,6 +70,10 @@ Clone this repository into your ROS 2 workspace's `src` directory:
 
 ```bash
 cd ~/ros2_ws/src
-git clone https://github.com/your-username/ros-rl-node.git
+git clone https://github.com/eagle-Ji/course_experiment.git
 
-
+cd ~/ros2_ws
+colcon build
+source ~/ros2_ws/install/setup.bash
+ros2 launch <your_launch_file>
+ros2 run <your_package_name> rl_node_class
